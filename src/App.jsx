@@ -1,8 +1,7 @@
 import './App.css'
-import {BrowserRouter as Router, Route }from 'react-router-dom';
-import Join from "./component/Join/Join"
-const ENDPOINT ='http://localhost:4500/'
-const socket = socketIO(ENDPOINT, {transports:['websocket']})
+import {BrowserRouter as Router, Route,Routes }from 'react-router-dom';
+import Join from "./components/Join/Join.jsx"
+import Chat from './components/Chat/Chat.jsx';
 function App() {
  
  
@@ -10,7 +9,10 @@ function App() {
   return (
     <>
     <Router>
-      <Route path="/" component={}  />
+      <Routes>
+      <Route path="/" element={<Join/>}  />
+      <Route path = "/chat" element={<Chat/>}/>
+      </Routes>
     </Router>
       </>
   )
