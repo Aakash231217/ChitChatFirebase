@@ -1,0 +1,88 @@
+/* General styling for the chat page */
+.chatPage {
+    background-color: rgb(31, 29, 29);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the chat container */
+.chatContainer {
+    background-color: white;
+    height: 60%;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for 3D effect */
+    border-radius: 10px; /* Rounded corners for the container */
+    overflow: hidden; /* Ensures no child element overflows the rounded border */
+}
+
+/* Header styling with a more sophisticated look */
+.header {
+    background-color: crimson;
+    height: 15%;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif; /* Improved typography */
+}
+
+/* Chat box styling */
+.chatBox {
+    border: 0.2vmax solid black;
+    height: 70%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Adds scrolling to chat box */
+}
+
+/* Input box styling */
+.inputBox {
+    border: 0.2vmax solid black;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Text input field styling */
+#chatInput {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    font-size: 1.1em; /* Larger text for easy reading */
+}
+
+/* Send button styling */
+.sendBtn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    width: 20%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* Enhanced hover effect for the send button */
+.sendBtn:hover {
+    background-color: rgb(91, 7, 24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds shadow on hover for depth */
+}
+
+/* Ensuring the overall design is responsive to screen size changes */
+@media (max-width: 600px) {
+    .chatContainer {
+        width: 80%; /* More screen space on smaller devices */
+        height: 80%;
+    }
+    .header {
+        font-size: 1.2em; /* Adjusting font size on smaller screens */
+    }
+}
